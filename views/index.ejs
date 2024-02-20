@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connaître</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color: #17181D;">
+    <div class="container" style="width: 100%; min-height: 100vh; padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="box"
+            style="background-color: #292C35; width: 100%; min-height: 90vh; border-radius: 30px; padding-top: 1px; padding-bottom: 2rem;">
+            <div class="d-flex flex-column align-items-center p-4">
+                <h1 class="display-4 text-center font-weight-bold" style="font-size: 44px; color: #FCD9B8; text-transform: uppercase;">
+                    Est-ce que vous savez qui vous êtes ?
+                </h1>
+                <p class="font-weight-normal my-3" style="font-size: 17px; color: #FCD9B8;">
+                    Je vous propose de répondre à quelque question
+                    en toute honnêteté, pour que vous puissiez dans
+                    votre esprit, pour trouver les réponses qui se
+                    trouvent au fond de vous.
+                </p>
+            </div>
+            <form action="/" method="post" onsubmit="return validateForm()" class="container w-100 mb-3 text-light">
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <label for="email" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Un pdf de vos réponses vous sera envoyé par mail dans les 24h.
+                            <br>
+                            <br>
+                            Email :
+                        </label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="johndoe@gmail.com"
+                            style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="name" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Comment vous vous appellez ?
+                        </label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Raphael De Almeida"
+                            style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="signification" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Que veut dire votre nom et votre prénom ?
+                        </label>
+                        <input type="text" class="form-control" id="signification" name="signification"
+                            placeholder="Raphael signifie Dieu guérit..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="origine" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quel est votre origine et votre nationalité ?
+                        </label>
+                        <input type="text" class="form-control" id="origine" name="origine"
+                            placeholder="Portugais d'origine et français de nationalité" style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="temperament" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quels traits de caractère tirez-vous de ces pays ?
+                        </label>
+                        <input type="text" class="form-control" id="temperament" name="temperament"
+                            placeholder="Gros mangeur, la fierté..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="aime" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Cites les choses que vous aimez le plus ?
+                        </label>
+                        <input type="text" class="form-control" id="aime" name="aime"
+                            placeholder="Les calins, les bisous, les mangas..." style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="aimepas" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Cites les choses que vous aimez le moins ?
+                        </label>
+                        <input type="text" class="form-control" id="aimepas" name="aimepas"
+                            placeholder="La puanteur, les boutons, les aubergines..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="atouts" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quels sont vos atouts ?
+                        </label>
+                        <input type="text" class="form-control" id="atouts" name="atouts"
+                            placeholder="Etre fort, toujours souriant, fort en math..." style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="qualites" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quels sont vos qualités ?
+                        </label>
+                        <input type="text" class="form-control" id="qualites" name="qualites"
+                            placeholder="La gentillesse, etre patient, etre intelligent..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="defauts" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quels sont vos défauts ?
+                        </label>
+                        <input type="text" class="form-control" id="defauts" name="defauts"
+                            placeholder="Egoiste, narcissique, cupide..." style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="peurs" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            De quoi avez-vous peur ?
+                        </label>
+                        <input type="text" class="form-control" id="peurs" name="peurs"
+                            placeholder="De l'echec, des serpents..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="importants" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Qu'est ce qui est important pour vous ?
+                        </label>
+                        <input type="text" class="form-control" id="importants" name="importants"
+                            placeholder="Dieu, moi, ma famille..." style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="reves" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Qu'est ce que vous avez envie de vivre ?
+                        </label>
+                        <input type="text" class="form-control" id="reves" name="reves"
+                            placeholder="Voyager chaque pays du monde..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-6">
+                        <label for="role" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quel est votre rôle dans ce monde ?
+                        </label>
+                        <input type="text" class="form-control" id="role" name="role"
+                            placeholder="Sauver l'hummanité..." style="margin-top: 15px;">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="aide" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Qu'est ce que vous apportez aux autres ?
+                        </label>
+                        <input type="text" class="form-control" id="aide" name="aide"
+                            placeholder="Je les rends heureux, je les aide dans leur vie..." style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-12">
+                        <label for="sens" class="font-weight-bold" style="font-size: 14px; color: #FCD9B8;">
+                            Quel est le sens de votre vie ?
+                        </label>
+                        <input type="text" class="form-control" id="sens" name="sens"
+                            placeholder="Résumer, synthétisez, évrivez ce qui vous vient par la tête..."
+                            style="margin-top: 15px;">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <button type="submit" class="btn btn-primary"
+                        style="margin-top: 2rem; font-weight: bold; color: #292C35; background-color: #FCD9B8;">
+                        Qui je suis ?
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            // Vérifier si chaque champ est rempli
+            var fields = [
+                'email', 'name', 'signification', 'origine', 'temperament',
+                'aime', 'aimepas', 'atouts', 'qualites', 'defauts',
+                'peurs', 'importants', 'reves', 'role', 'aide', 'sens'
+            ];
+
+            for (var i = 0; i < fields.length; i++) {
+                var fieldName = fields[i];
+                var value = document.getElementById(fieldName).value.trim();
+
+                if (value === "") {
+                    alert("Veuillez remplir tous les champs du formulaire.");
+                    return false; // Empêcher la soumission du formulaire
+                }
+            }
+
+            // Si tous les champs sont remplis, le formulaire peut être soumis
+            return true;
+        }
+    </script>
+</body>
+
+</html>
